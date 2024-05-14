@@ -1,0 +1,153 @@
+/*Estilo contenedor*/
+.contenedor {
+        width: auto;
+        border: 3px dotted rgb(235, 77, 104);
+        margin-bottom: 15px;
+        background: hsla(141, 54%, 86%, 1);
+        background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+        display: grid;
+        gap: 15px;
+}
+
+.contenedor2 {
+    width: auto;
+    border: 3px dotted rgb(50, 196, 159);
+    margin-bottom: 15px;
+    background:  hsla(177, 87%, 79%, 1);
+    background: linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);
+    display: grid;
+    gap: 15px;
+    height: 300px;
+}
+
+.item{
+    border: 1px solid rgb(175, 236, 228);
+    background-color:aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; 
+}
+.item2{
+    border: 1px solid rgb(175, 236, 228);
+    background-color:aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; 
+    width: 40px;
+    height: 50px;
+}
+
+/*propiedad grid-template-column*/
+.tcol{grid-template-columns: 150px 200px 100px;}
+.trow{grid-template-rows: 100px 80px 60px 40px;}
+.tcol-row{
+    grid-template-columns: 200px 150px 90px 50px;
+    grid-template-rows: 120px 40px 200px 80px 100px;
+}
+/*propiedad grid-FR*/
+.frtcol{grid-template-columns: 2fr 1fr 2fr;}
+.frtrow{grid-template-rows: 2fr 1fr 2fr 1fr;}
+.frtcol-row{
+    grid-template-columns: 3fr 1fr 2fr 4fr 2fr 0.5fr 1.5fr;
+    grid-template-rows: 3fr 4.5fr 2fr;
+}
+/*.repeat{
+    grid-template-columns: 100px repeat(2, 0.5fr) 2fr;
+    grid-template-rows: repeat(2, 1.5fr) 4fr  2fr}*/
+
+.repeat{
+    grid-template-columns: 100px repeat(4, 50px) 2.5fr;
+    grid-auto-rows: repeat(4, 1fr 2fr);
+}
+.repeat2{
+    grid-template-columns: repeat(2, minmax(300px, 600px));
+    grid-template-rows: repeat(2, 1fr);
+}
+.fill{grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
+.fit{grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));}
+
+/*Justify-Items*/
+.ji_start{
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: start;
+}
+.ji_end{
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: end;
+}
+.ji_center{
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+}
+.ji_stretch{
+/*grid-template-columns: repeat(3, 1.5fr);*/
+    grid-template-columns: 25px 200px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: stretch;
+}
+/*Align-Items*/
+.ai_start{
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: start;
+}
+.ai_end{
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: end;
+}
+.ai_center{
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+.ai_stretch{
+    grid-template-columns: 25px 200px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+}
+/*Justify-Content*/
+.jc_start{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 75px);
+    justify-content: start;
+}
+.jc_end{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 50px);
+    justify-content: end;
+}
+.jc_center{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 50px);
+    justify-content: center;
+
+}
+.jc_stretch{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 50px);
+    justify-content: stretch;
+
+}
+.jc_end{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 50px);
+    justify-content: end;
+}
+.jc_center{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 50px);
+    justify-content: center;
+}
+.jc_stretch{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 50px);
+    justify-content: stretch;
+}
